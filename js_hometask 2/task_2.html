@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+</head>
+<body>
+
+  <script language="javascript" type="text/javascript">
+	/*2.Створіть чотири функції для арифметичних дій: додавання, віднімання, множення і ділення. 
+	Кожна функція повинна приймати 2 параметра і виводити результат їх обчимлення. 
+	Функція ділення повинна робити перевірку ділення на нуль.*/
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 function add(a, b) {
+		return a + b;
+	 }
+	  function sub(a, b) {
+		return a - b;
+	 }
+	  function mul(a, b) {
+		return a * b;
+	 }
+	  function div(a, b) {
+		if(b === 0) 
+			alert('На ноль делить нельзя!');
+		else 
+		return a / b;
+		
+	}
+	
+	 var operand1 = +prompt("Введите первое число");
+	 var sign = prompt("Введите какое арифметическое действие вы хотите сделать:+ - * /");
+	 var operand2 = +prompt("Введите второе число");
+	 var result;
+	 
+	 
+	 
+	 switch (sign) {
+	 
+	 case "+" :
+		result = add(operand1, operand2);
+		break;
+	 case "-":
+		result = sub(operand1, operand2);
+		break;
+	 case "*":
+		result = mul(operand1, operand2);
+		break;
+	 case "/":
+		result = div(operand1, operand2);
+		break;
+	default: document.write(sign + " - " + "не является арифметическим знаком!"); 
+	}
+	 
+	if (result){ 
+		document.write("<p>" + operand1 + sign + operand2 + "=" + result + "</p>");
+	}
+	  
+	  
+	  
+	  
+  </script>
+</body>
+</html>

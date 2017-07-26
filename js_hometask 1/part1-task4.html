@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+</head>
+<body>
+
+  <script language="javascript" type="text/javascript">
+ 
+ /*4. Дано два числа A і B, де (A<B). 
+      Вивести на екран суму всіх чисел розташованих в числовому проміжку між А до В. 
+      Вивести на екран всі непарні значення, розташовані у проміжку між А до В. */ 
+
+	  
+// Для суммы чисел между A и B	
+var sum = 0;	
+var a = +prompt("Введите целое число A");
+var b = +prompt("Введите целое число B");
+
+for(var i = a + 1; i < b; i++){
+    sum += i;
+}
+document.write("Cумма:"+sum+ "<br><hr>");
+document.write("Не парные числа:"+"<br>");
+   
+// Для вывода не парных чисел	
+var sum = 0;	
+var a = +prompt("Введите целое число A");
+var b = +prompt("Введите целое число B");
+
+for(var i = a + 1; i < b; i++){
+if(i % 2 == 0 )    continue;
+	document.write(i + "<br>");
+	
+}
+document.write("<hr>");		
+	  	  
+	  
+	  
+	 
+
+  
+
+
+	  
+	  
+  
+  
+  
+  
+	
+	
+
+    
+	
+	
+  </script>
+</body>
+</html>

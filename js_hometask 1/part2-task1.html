@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+</head>
+<body>
+
+  <script language="javascript" type="text/javascript">
+ 
+ /*1.1. Написати программу для логіста, яка буде запитувати кількість магазинів,
+в які потрібно доставити товар, а потім розрахувати і виводити на екран кількість 
+можливих варіантів доставки товара. Для вирішення задачі використайте факторіал N!
+розрахований за допомогою цикла do-while */ 
+	
+	
+	
+	var a = +prompt("Введите количество магазинов");
+	var i = 1;
+	var production = 1;
+	if(a <= 0){
+	alert("Ошибка, вы ввели не корректное значение!");
+	}
+	else{
+	do{
+	production *= i;
+	i++;
+	}while(i <= a)
+	}
+	document.write(production);
+	
+
+  </script>
+</body>
+</html>

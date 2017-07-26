@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+</head>
+<body>
+
+  <script language="javascript" type="text/javascript">
+	
+	  var x = 6;
+	  var y = 15;
+	  var z = 4;
+	  
+	 
+	 
+	// var result = x += y - x++ * z;
+	
+											/*	
+											    1.) a = x++; a = 6; 
+												2.) a = a * z = 24;
+												3.) a = y - a*z = 15-24=-9
+												4.) result = x += a = 6-9 = -3;
+																				*/
+
+	
+	   
+	 //var result = z = --x -y * 5;                   
+											/* 
+											   1. a = y * 5 = 75;
+											   2. a = --x = 5;
+											   3. result = z = 5 - 75 = -70;
+																				*/ 
+	 
+	 
+	
+	 
+	//var result = y /= x + 5 % z;
+											/* 
+											   1. a = 5 % z = 1;
+											   2. a = x + a = 6 + 1 = 7;
+											   3. result = y /= a = 2.14;
+																			    */ 
+	   
+	 
+	// var result = z = x++ + y * 5;
+	                                        /* 
+											   1. a = y * 5 = 75;
+											   2. b = x++ = 6;
+											   3. result = a + b = 81;
+																			    */ 
+	 
+    //var result = x = y - x++ * z;
+	                                         /* 
+											   1. a = x++ = 6;
+											   2. a = a * z = 24;;
+											   3. result = x = y - a = 15 - 24 = -9;
+																			    */ 
+	  
+	  document.write(result);
+	 
+	  
+	  
+  </script>
+</body>
+</html>

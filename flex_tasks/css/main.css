@@ -1,0 +1,183 @@
+/* css for float.html
+.container {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.container div {
+     background-color:blue;
+     margin: 10px;
+     padding:20px;
+     width:400px;
+ }
+*/
+
+/*css for display flex-box
+.container {
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+}
+.container div {
+    background-color:blue;
+    margin:10px;
+    padding:20px;
+    width:400px;
+}
+*/
+
+/*css for box-group
+.container {
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row-reverse;
+    border:1px solid black;
+    justify-content: flex-end;
+}
+div {
+    margin:5px;
+    padding:10px;
+}
+.red{
+    background-color: red;
+}
+.green {
+    background-color: green;
+}
+.blue {
+    background-color: blue;
+}
+*/
+
+/* css for box-flex
+.container {
+    display: -webkit-flex;
+    display: flex;
+    border:1px solid black;
+    width:100%;
+}
+.left {
+    flex:0.33;
+    -webkit-flex: 0.33;
+    border:1px solid red;
+}
+
+.right {
+    flex:0.67;
+    -webkit-flex: 0.65;
+    border:1px solid blue;
+}
+div{
+    padding:20px;
+}
+*/
+
+/* css for box-align
+
+#grid {
+    display: -webkit-flex;
+    display: flex;
+    border: 1px solid black;
+    width:300px;
+    height:600px;
+}
+div {
+    width:50px;
+    height:25px;
+    -webkit-align-self: center;
+    align-self: center;
+}
+*/
+
+/*css for box-direcrion
+
+
+#grid {
+    float:right;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+}
+#grid div {
+    background-color:blue;
+    margin: 10px;
+    padding:20px;
+    width:400px;
+}
+*/
+
+/* css for box-pack
+#container {
+
+    display: -webkit-flex;
+    display: flex;
+    width: 800px;
+    border: 1px solid black;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+
+
+}
+#container div {
+    background-color:blue;
+    margin: 10px;
+    padding:20px;
+    width:30px;
+}
+*/
+
+/*  css for box-sizing не разобрался как правильно сделать.
+
+.content-box, .border-box {
+    display: -webkit-flex;
+    display: flex;
+    width: 400px;
+    padding: 10px;
+    margin: 10px;
+    border: 10px solid #000;
+}
+.border-box {
+    background: #fc0;
+}
+.content-box {
+    background: #f0f0f0;
+}
+*/
+
+/* css for Example
+
+body {  font-family: 'Segoe UI', Tahoma;  }
+
+.header, .section, .footer {
+    display: -webkit-flex;
+    display: flex;
+    margin: 10px;
+    padding: 10px;
+    min-width: 640px;
+    border: 1px solid #eee;
+}
+
+.nav, .content, .aside{
+    padding: 10px;
+}
+
+.nav {background-color: #CDFCA9;}
+
+.content {background-color: #E8B15B;}
+
+.aside {background-color: #C1D652;}
+
+*/
+
+
+
+
+
+
+
+
+
+
