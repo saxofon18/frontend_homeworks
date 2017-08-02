@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+</head>
+<body>
+
+  <script language="javascript" type="text/javascript">
+	/*Створити двомірний масив елементів розміром 5х5 і заповнити його довільними цілочисельними значеннями. 
+	По головній діагоналі всі числа зі знаком (-) замінити на 0, а числа зі знаком (+) на число */
+	 
+	 // Создаем функцию для заполнения массива случайными числами 
+	  function myRandom (from, to) {
+	  return Math.floor((Math.random() * (to - from + 1))+ from);
+	  }
+	 // Создаем двомерный массив 
+	  var mas = new Array(5);
+	  for(var i = 0; i < mas.length; i++){
+		mas[i] = new Array(5);
+		
+	  }
+	  
+	  
+	  // Перебераем двомерный массив
+	  for (var i = 0; i < 5; i++){
+
+	  for (var j = 0; j < 5; j++){
+
+        var a = mas[i][j] = myRandom(-2, 2);// присваиваем значение двомерного массива рандомно от -2 до 2
+		if(i == j){							// условие для диагональных элементов
+				if (a < 0) {
+					mas[i][j] = 0;
+					
+				}
+				else {	
+					mas[i][j] = "*";
+					
+				}
+			}
+		document.write(mas[i][j]);
+		
+
+}
+	document.write("<br/>");
+
+}
+	  
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	  
+  </script>
+</body>
+</html>

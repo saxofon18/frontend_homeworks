@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+</head>
+<body>
+
+  <script language="javascript" type="text/javascript">
+	/*Створити об’єкт «FE Developer» за допомогою блока ініціалізації, 
+	  задати властивості імені, прізвище, віку тощо.
+	  Створити об’єкт «BE Developer» за допомогою конструктора, 
+	  задати властивості імені, прізвище, віку тощо.*/
+	  
+	  // Object FE Developer через блок инициализации
+	  
+	  var feDeveloper = {
+		name : "Andrew",
+		surname : "Seriy",
+		age : 25,
+		bornDate : "26 march",
+		bornYear : 1992,
+		email : "saxofon18@ukr.net",
+		password: 123465, 
+		country : "Ukraine",
+		city : "Kiev",
+		lang : "Javascript"
+		
+	  }
+	  
+	  for (key in feDeveloper ){
+	  document.write(feDeveloper[key]+"<br/>");
+	  }
+	  document.write("<hr/>");
+  // Создаем обьект через конструктора
+	  
+	  var beDeveloper = new Object()
+	  
+	  beDeveloper.name = prompt("Введите свое имя");
+	  beDeveloper.surname = prompt("Введите свою фамилию");
+	  beDeveloper.age = prompt("Введите свой возраст");
+	  beDeveloper.bornDate = prompt("Введите дату рождения");
+	  beDeveloper.bornYear = prompt("Введите год рождения");
+	  beDeveloper.email = prompt("Введите свой email");
+	  beDeveloper.password = prompt("Введите свое пароль");
+	  beDeveloper.country = prompt("Введите страну проживания");
+	  beDeveloper.city = prompt("Введите город проживания");
+	  beDeveloper.lang = prompt("Введите язык программирования");
+	  
+	  beDeveloper.show = function(){
+		document.write(beDeveloper.name + "<br/>");
+		document.write(beDeveloper.surname + "<br/>");
+		document.write(beDeveloper.age + "<br/>");
+		document.write(beDeveloper.bornDate + "<br/>");
+		document.write(beDeveloper.bornYear + "<br/>");
+		document.write(beDeveloper.email + "<br/>");
+		document.write(beDeveloper.password + "<br/>");
+		document.write(beDeveloper.country + "<br/>");
+		document.write(beDeveloper.city + "<br/>");
+	    document.write(beDeveloper.lang + "<br/>");
+		
+	  };
+	  beDeveloper.show();
+	  
+	  
+	 
+	  
+  </script>
+</body>
+</html>

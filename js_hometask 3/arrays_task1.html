@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+</head>
+<body>
+
+  <script language="javascript" type="text/javascript">
+	/*Створити масив розмірністю N елементів, заповнити його довільними цілими значеннями. 
+		Вивести найбільше значення масиву, найменше значення масиву, загальну суму елементів, 
+		середнє арифметичне усіх елементів, вивести всі непарні значення.*/
+	
+	  // Создаем массив, заполняя его любыми значениями
+	  var n = +prompt("Введите размерность массива!");
+	  var numbers = new Array(n);
+	  for(var i = 0; i < n; i++){
+	  var b = +prompt("Введите значение элемента массива");
+	  numbers[i] = b;
+	  }
+	  document.write("Получаем наш массив: [" + numbers + "];");
+	  document.write("<hr>");
+	  // Получим наибольшее и наименьшее значение элемента массива
+	  var max = Math.max.apply(null, numbers);
+	  var min = Math.min.apply(null, numbers);
+	  document.write("Наибольшее значение элемента массива: " + max );
+	  document.write("<hr>");
+	  document.write("Наименьшее значение элемента массива: " + min );
+	  document.write("<hr>");
+	  // Выводим общую сумму элементов и среднее арифметическое
+	  var sum = 0;
+	  for(i = 0; i < n; i++) {
+		sum += numbers[i];
+	  }
+	  document.write("Сумма элементов равна: " + sum);
+	  document.write("<hr>");
+	  document.write("Среднее арифметическое всех элементов равно: " + (sum / n));
+	  document.write("<hr>");
+	  // Выведем все не парные значения массива
+	  document.write("Все не парные элементы массива: ")
+	  for(var i = 0; i < n; i++){
+		if (numbers[i] % 2 == 1){
+			document.write(numbers[i] + " ");
+		}
+	  }
+	 
+	  
+	 
+	 
+	  
+	  
+	  
+	  
+  </script>
+</body>
+</html>
