@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+</head>
+<body>
+
+  <script language="javascript" type="text/javascript">
+	/*Задание 1.
+		Создайте функцию-конструктор Box(коробка) для создания объекта со свойствами Height(высота), Width(ширина), 
+		Depth(глубина) и Material(материал). Также в объекте должны быть методы Volume - для получения объема и 
+		equals() – для сравнения объектов, объекты должны считаться равными если содержат одинаковые значения в 
+		свойстве Material. */
+	  
+	
+	  
+	 
+  // Создаем функцию конструктор для создания объекта со свойствами width, height, depth, material
+  
+		function Box(){
+			this.height = +prompt("Введите высоту коробки"); 
+			this.width = +prompt("Введите ширину коробки");
+			this.depth = +prompt("Введите глубину коробки");
+			this.material = prompt("Какой материал коробки");
+			
+			
+ // cоздаем метод для функции конструктора(функцию в функции)	
+			this.volume = function() {
+				var v = this.height * this.width * this.depth;
+				document.write("Материал - " + this.material + "<br/>");
+				document.write("Объем коробки равен: " + v);
+				document.write("<hr>");
+				
+
+			
+			
+		};
+		};
+// создаем два новых обьекта:
+	  var first = new Box();
+	  first.volume();
+	 
+	  var second = new Box();
+	  second.volume();
+// создаем метод(функцию), которая будет проверять на равенство наши объекты		
+		if(first.material === second.material){
+			this.equal = function(){
+				document.write("Обьекты считаются равными, так как имеют одинаковый материал - " + first.material);
+			};
+			equal();
+		}
+		else{
+		this.equal = function(){
+			document.write("Обьекты не являются равными, так, как у первого обьекта материал - " + first.material + "</br>");
+			document.write("А у второго обьекта материал - " + second.material);
+			};
+			equal();
+		}
+
+	  
+	 
+	  
+  </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+</head>
+<body>
+
+  <script language="javascript" type="text/javascript">
+	/*4.Создайте пример демонстрирующий назначение метода toString()*/
+	
+	function Person(name, age, password, email) {
+		this.name = prompt("What is your name?");
+		this.age = +prompt("How old are you?");
+		this.password = prompt("Write your password");
+		this.email = prompt("Write your email");
+		this.toString = function(){
+			return "My name is " + this.name + "</br>" + "I am " + this.age + "</br>" + "My password - " + this.password + "</br>" + "My email is " + this.email;
+			
+		};
+	};
+	
+	var p1 = new Person;
+	document.write(p1);
+	
+	
+  </script>
+</body>
+</html>

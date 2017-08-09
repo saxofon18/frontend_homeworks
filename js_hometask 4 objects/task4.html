@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+</head>
+<body>
+
+  <script language="javascript" type="text/javascript">
+	/*4.Разработайте функцию-конструктор, которая будет создавать объект Human
+	(человек) добавьте на свое усмотрение свойства и методы в этот объект.
+	Подумайте какие методы и свойства следует сделать уровня экземпляра, 
+	а какие уровня функции-конструктора.  */
+	
+	function Human(surname, country){
+		this.surname = surname;
+		this.country = country;
+		this.sayYo = function(){
+			alert("Yo Mr." + this.surname);
+		};
+		this.getCountry = function(){
+			 alert("Where are from?");
+			 document.write("I am from " + this.country);
+		};
+	};
+		var man = new Human ("Seriy", "Ukraine");
+		
+		man.sayYo();
+		man.getCountry();
+	
+	
+  </script>
+</body>
+</html>

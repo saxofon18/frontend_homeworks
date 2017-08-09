@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+</head>
+<body>
+
+  <script language="javascript" type="text/javascript">
+	/*Задание 3.
+		Разработайте функцию-конструктор, которая будет создавать объект Human(человек) 
+		создайте массив объектов и реализуйте функцию, которая будет сортировать элементы массива по значению свойства Age 
+		по возрастанию или по убыванию.  */
+		
+	//Создаем функцию-конструктор Human, у которой есть свойство age:
+	
+	function Human(age){
+		this.age = age;
+	};
+	// Создаем обьекты с разными свойствами
+	var a = new Human(5);
+	var b = new Human(10);
+	var c = new Human(9);
+	// Создаем массив с этих обьектов
+	var arr = [a, b, c];
+	arr2 = [];
+	//Вытягиваем с arr все свойства age
+	arr.forEach(function(item, i, arr){
+		var value = item.age;
+		arr2.push(value);
+	});
+	//alert(arr2);
+	//Создаем функцию для сортировки чисел (я нашел ее в интернет не совсем понимаю ее работу!!!)
+	function compareNumeric(x1, x2) {
+		if (x1 > x2) return 1; 
+		if (x1 < x2) return -1;
+	};
+	arr2.sort(compareNumeric);
+	alert(arr2);
+  </script>
+</body>
+</html>

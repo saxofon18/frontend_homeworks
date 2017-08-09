@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+</head>
+<body>
+
+  <script language="javascript" type="text/javascript">
+	/*Задание 2.
+		Создайте функцию конструктор, которая создает объект со свойством экземпляра, 
+		свойством функции-конструктора, с методом экземпляра и методом функции-конструктора. 
+		Имена выберите произвольно.   */
+		
+	//Создаем функцию-конструктор, у которой есть свойство name && age:
+	
+	function person(name, age){
+		this.name = name;
+		this.age = age;
+	//создаем в функции конструктора функции(то есть, методы):
+		this.sayName = function(name){
+			alert("My name is " + this.name);
+		};
+		this.sayAge = function(age){
+			alert("I'm " + this.age + "years an old");
+		};
+		
+	};
+	// Создаем обьект 1
+		var p1 = new person("Andrey",25);
+		p1.sayName();
+		p1.sayAge();
+	  
+	
+	  
+	 
+ 
+  
+		
+  </script>
+</body>
+</html>
