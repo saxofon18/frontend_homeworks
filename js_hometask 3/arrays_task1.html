@@ -15,8 +15,8 @@
 	  var n = +prompt("Введите размерность массива!");
 	  var numbers = new Array(n);
 	  for(var i = 0; i < n; i++){
-	  var b = +prompt("Введите значение элемента массива");
-	  numbers[i] = b;
+	   numbers[i] = +prompt("Введите значение элемента массива");
+	 
 	  }
 	  document.write("Получаем наш массив: [" + numbers + "];");
 	  document.write("<hr>");
@@ -37,7 +37,7 @@
 	  document.write("Среднее арифметическое всех элементов равно: " + (sum / n));
 	  document.write("<hr>");
 	  // Выведем все не парные значения массива
-	  document.write("Все не парные элементы массива: ")
+	  document.write("Все не парные элементы массива: ");
 	  for(var i = 0; i < n; i++){
 		if (numbers[i] % 2 == 1){
 			document.write(numbers[i] + " ");
