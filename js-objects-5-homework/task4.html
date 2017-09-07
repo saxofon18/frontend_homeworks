@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+</head>
+<body>
+
+  <script language="javascript" type="text/javascript">
+ 
+ // 4. Найдите ошибку в наследовании. К чему она приведёт? 
+ 
+ function Animal(name) {
+	this.name = name;
+}
+
+Animal.prototype.walk = function() {
+	alert( "ходит " + this.name );
+};
+
+function Rabbit(name) {
+	this.name = name;
+}
+
+Rabbit.prototype = Animal.prototype;//Можно вместо этой записи записать
+									//Rabbit.prototype = Object.create(Animal.prototype);
+									//Rabbit.prototype.constructor = Rabbit; для сохранения конструктора
+
+Rabbit.prototype.walk = function() {
+	alert( "прыгает! и ходит: " + this.name );
+};
+
+//var rabbit = new Rabbit();не создали экземпляра обьекта для 
+//функции Rabbit
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+  </script>
+</body>
+</html>

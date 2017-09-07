@@ -1,0 +1,201 @@
+1. Чему равно свойство после delete?
+
+Какие значения будут выводиться в коде ниже?
+
+ 
+
+var animal = {
+
+  jumps: null
+
+};
+
+var rabbit = {
+
+  jumps: true
+
+};
+
+ 
+
+rabbit.__proto__ = animal;
+
+ 
+
+alert( rabbit.jumps ); // ? (1)
+
+ 
+
+delete rabbit.jumps;
+
+ 
+
+alert( rabbit.jumps ); // ? (2)
+
+ 
+
+delete animal.jumps;
+
+ 
+
+alert( rabbit.jumps ); // ? (3)
+
+ 
+
+Итого три вопроса.
+
+ 
+
+2. Прототип и this
+
+ 
+
+Сработает ли вызов rabbit.eat() ?
+
+ 
+
+Если да, то в какой именно объект он запишет свойство full: в rabbit или animal?
+
+ 
+
+var animal = {
+
+  eat: function() {
+
+    this.full = true;
+
+  }
+
+};
+
+ 
+
+var rabbit = {
+
+  __proto__: animal
+
+};
+
+ 
+
+rabbit.eat();
+
+ 
+
+3. Алгоритм для поиска
+
+Есть объекты:
+
+var head = {
+
+  glasses: 1
+
+};
+
+ 
+
+var table = {
+
+  pen: 3
+
+};
+
+ 
+
+var bed = {
+
+  sheet: 1,
+
+  pillow: 2
+
+};
+
+ 
+
+var pockets = {
+
+  money: 2000
+
+};
+
+ 
+
+Задание состоит из двух частей:
+
+ 
+
+Присвойте объектам ссылки __proto__ так, чтобы любой поиск чего-либо шёл по алгоритму pockets -> bed -> table -> head.
+
+ 
+
+То есть pockets.pen == 3, bed.glasses == 1, но table.money == undefined.
+
+ 
+
+После этого ответьте на вопрос, как быстрее искать glasses: обращением к pockets.glasses или head.glasses? Попробуйте протестировать.
+
+ 
+
+4. Найдите ошибку в наследовании. К чему она приведёт?
+
+ 
+
+function Animal(name) {
+
+  this.name = name;
+
+}
+
+ 
+
+Animal.prototype.walk = function() {
+
+  alert( "ходит " + this.name );
+
+};
+
+ 
+
+function Rabbit(name) {
+
+  this.name = name;
+
+}
+
+Rabbit.prototype = Animal.prototype;
+
+ 
+
+Rabbit.prototype.walk = function() {
+
+  alert( "прыгает! и ходит: " + this.name );
+
+};
+
+ 
+
+5. В коде ниже создаётся простейшая иерархия классов: Animal -> Rabbit.
+
+ 
+
+Что содержит свойство rabbit.constructor? Распознает ли проверка в alert объект как Rabbit?
+
+ 
+
+function Animal() {}
+
+ 
+
+function Rabbit() {}
+
+Rabbit.prototype = Object.create(Animal.prototype);
+
+ 
+
+var rabbit = new Rabbit();
+
+ 
+
+ 
+
+alert( rabbit.constructor == Rabbit ); // что выведет?

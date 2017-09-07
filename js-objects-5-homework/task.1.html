@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+</head>
+<body>
+
+  <script language="javascript" type="text/javascript">
+ 
+ //1. Чему равно свойство после delete? Какие значения будут выводиться в коде ниже? 
+
+
+
+
+
+ 
+
+
+var animal = {
+
+
+  jumps: null
+
+
+};
+
+
+var rabbit = {
+
+
+  jumps: true
+
+
+};
+
+
+ 
+
+
+rabbit.__proto__ = animal;
+
+
+ 
+
+
+alert( rabbit.jumps ); // выводит true, свойство взято из rabbit
+
+
+ 
+
+
+delete rabbit.jumps; 
+
+
+
+ 
+
+
+alert( rabbit.jumps ); // после delete значение стало null, свойство взято у animal
+
+
+ 
+
+
+delete animal.jumps;
+
+
+ 
+
+
+alert( rabbit.jumps ); // теперь undefined,свойства больше нет
+
+
+
+  </script>
+</body>
+</html>

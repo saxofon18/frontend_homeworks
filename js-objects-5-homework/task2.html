@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+</head>
+<body>
+
+  <script language="javascript" type="text/javascript">
+ 
+ /*2.Сработает ли вызов rabbit.eat() ? 
+ Если да, то в какой именно объект он запишет свойство full: в rabbit или animal?*/
+ 
+ //1. rabbit.eat не сработало
+
+
+ 
+
+
+var animal = {
+
+
+  eat: function() {
+
+
+    this.full = true;
+
+
+  }
+
+
+};
+
+
+ 
+
+
+var rabbit = {
+
+
+  __proto__: animal
+
+
+};
+
+
+ 
+
+
+rabbit.eat();
+/*Ответ: Свойство будет записано в rabbit 
+	При вызове rabbit.eat() интерпретатор будет искать функцию eat(), но он
+	там ее не найдет. Потом он обратиться к ссылке __proto__:animal. 
+	В итоге он в animal найдет функцию eat, в которой он обратиться в this.full.
+	В итоге наш обьект rabbit будет иметь следующий вид:
+	
+	var rabbit = {
+		eat:fumction(){
+		
+		this.full = true;
+		}
+	};
+
+
+  </script>
+</body>
+</html>

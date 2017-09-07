@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+</head>
+<body>
+
+  <script language="javascript" type="text/javascript">
+ 
+ // 5. В коде ниже создаётся простейшая иерархия классов: Animal -> Rabbit.
+ //Что содержит свойство rabbit.constructor? Распознает ли проверка в alert объект как Rabbit?
+
+function Animal() {}
+
+function Rabbit() {}
+
+Rabbit.prototype = Object.create(Animal.prototype);
+
+var rabbit = new Rabbit();
+
+alert( rabbit.constructor == Rabbit ); // что выведет?
+
+//Выведет false, потому что контруктор нечего не соддержит,он пустой.
+// Если Мы добавим строку Rabbit.prototype.constructor = Rabbit;, то будет true
+  
+  </script>
+</body>
+</html>

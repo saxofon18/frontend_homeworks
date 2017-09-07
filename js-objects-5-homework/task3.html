@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+</head>
+<body>
+
+  <script language="javascript" type="text/javascript">
+ 
+ /*3.Присвойте объектам ссылки __proto__ так, чтобы любой поиск чего-либо шёл по алгоритму pockets -> bed -> table -> head.
+	То есть pockets.pen == 3, bed.glasses == 1, но table.money == undefined.
+	После этого ответьте на вопрос, как быстрее искать glasses: обращением к pockets.glasses или 
+	head.glasses? 
+	Попробуйте протестировать.*/
+ 
+var head = {
+	glasses: 1
+};
+
+var table = {
+	pen: 3
+};
+table.__proto__ = head;
+
+var bed = {
+	sheet: 1,
+	pillow: 2
+};
+bed.__proto__ = table;
+
+var pockets = {
+	money: 2000
+};
+pockets.__proto__ = bed;
+
+alert(pockets.pen); // ввыводит 3
+alert(bed.glasses); // ввыводит 1
+alert(table.money); // ввыводит undefined
+
+
+
+
+ 
+
+
+
+
+
+  </script>
+</body>
+</html>
